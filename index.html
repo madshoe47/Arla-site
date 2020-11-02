@@ -5,35 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arla</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 
 <body>
 
     <nav class="navigation">
         <div class="wrapperNav">
             <div class="navbarBullet">
-                <img class="iconNavbar" id="firstIcon" src="" alt="">
-                <p class="textNavbar" id="firstText"></p>
+                <img class="iconNavbar" id="firstIcon" src="images/house-1.svg" alt="">
+                <p class="textNavbar" id="firstText">Home</p>
             </div>
-
             <div class="navbarBullet">
-                <img class="iconNavbar" id="firstIcon" src="" alt="">
-                <p class="textNavbar" id="firstText"></p>
+                <img class="iconNavbar" id="secondIcon" src="images/Icon material-show-chart.svg" alt="">
+                <p class="textNavbar" id="secondText">Charts</p>
             </div>
-
             <div class="navbarBullet">
-                <img class="iconNavbar" id="firstIcon" src="" alt="">
-                <p class="textNavbar" id="firstText"></p>
+                <img class="iconNavbar" id="thirdIcon" src="images/Profile.svg" alt="">
+                <p class="textNavbar" id="thirdText">Profile</p>
             </div>
-
             <div class="navbarBullet">
-                <img class="iconNavbar" id="firstIcon" src="" alt="">
-                <p class="textNavbar" id="firstText"></p>
+                <img class="iconNavbar" id=fourthIcon" src="images/Icon material-settings.svg" alt="">
+                <p class="textNavbar" id="fourthText">Settings</p>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="topPicture">
+            <img src="images/baggrundforside.png" alt="">
+            <h2>Godmorgen Jens</h2>
+        </div>
+
+
+        <div class="dropdown">
+            <button onclick="myFunction(), rotateFunction()" class="dropbtn">Kalbygaard <span><img class="arrowDropdown"
+                        src="images/Icon ionic-ios-arrow-back.svg" alt=""></span></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Frisenborg</a>
+                <a href="#">Solgården</a>
+                <a href="#">Husbygård</a>
             </div>
         </div>
 
-    </nav>
 
+    </main>
+
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>
