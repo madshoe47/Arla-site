@@ -89,7 +89,7 @@ main {
 /* Dropdown Button */
 .dropbtn {
     background-color: #B6D2B5;
-
+    border-radius: 5%;
     width: 150px;
     color: black;
     font-weight: bold;
@@ -149,6 +149,7 @@ main {
     display: block;
 }
 
+/* Dropdown end */
 
 /* Nugding numbers */
 
@@ -227,7 +228,6 @@ main {
 .submitValues {
     margin-left: 6%;
     margin-top: 6%;
-
 }
 
 .submitValues h2 {
@@ -254,6 +254,7 @@ main {
     float: left;
     margin-right: 5%;
     margin-top: 5%;
+    border-radius: 4%;
 }
 
 .headerCategory {
@@ -268,3 +269,5 @@ main {
     font-size: 12px;
     font-weight: 600;
 }
+
+/* Submitting place end */
