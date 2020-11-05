@@ -21,5 +21,5 @@ window.onclick = function (event) {
 }
 
 function rotateFunction() {
-    document.getElementsByClassName("arrowDropdown").style.transform = 'rotate(180deg)';
+    document.getElementById("arrowDropdown").classList.toggle("rotateArrow");
 }

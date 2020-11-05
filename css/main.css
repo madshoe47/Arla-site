@@ -95,6 +95,10 @@ h6 {
     margin-left: 10%;
 }
 
+.rotateArrow {
+    transform: rotate(180deg);
+}
+
 
 
 /* Dropdown button on hover & focus */
