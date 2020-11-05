@@ -21,6 +21,10 @@ h6 {
     color: #000;
 }
 
+main {
+    height: 100%;
+}
+
 
 /* Navigation start */
 
@@ -182,6 +186,7 @@ h6 {
     margin: 3.5%;
     position: relative;
     height: 50px;
+    margin-bottom: 170px;
 }
 
 .speekingOutCow {
@@ -212,4 +217,54 @@ h6 {
 .linkWithDecoration {
     text-decoration: underline;
     color: blue;
+}
+
+/* Nugding numbers end */
+
+
+/* Submitting place */
+
+.submitValues {
+    margin-left: 6%;
+    margin-top: 6%;
+
+}
+
+.submitValues h2 {
+    margin-right: 6%;
+    font-size: 22px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+
+.categoriesWrapper {
+    height: 80vh;
+    margin-left: 6%;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFE6B6;
+    width: 44.5%;
+    height: 88px;
+    float: left;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.headerCategory {
+    margin-bottom: 10%;
+    font-size: 16px;
+    width: 90%;
+    margin: auto;
+}
+
+.procesCategory {
+    margin-bottom: 10%;
+    font-size: 12px;
+    font-weight: 600;
 }
