@@ -39,6 +39,7 @@ main {
     bottom: 0;
     width: 100%;
     height: 75px;
+    z-index: 10;
     background-color: #fff;
 }
 
@@ -181,8 +182,9 @@ main {
 }
 
 .smallNumberFrontpage {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 2%;
+    width: 95%;
 }
 
 .lastYearFrontpage {
@@ -294,4 +296,16 @@ main {
 
 .logout-button {
     color: #78AB77;
+}
+
+
+
+@media only screen and (max-width: 350px) {
+    .whatsTheCowSaying {
+        width: 45%;
+    }
+
+    .theCowSpeeking {
+        left: 60%;
+    }
 }
