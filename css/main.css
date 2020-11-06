@@ -25,12 +25,6 @@ main {
     height: 100%;
 }
 
-.skygge {
-    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.75);
-
-
-}
-
 
 /* Navigation start */
 
@@ -104,6 +98,7 @@ main {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
 .arrowDropdown {
@@ -247,7 +242,7 @@ main {
 
 
 .categoriesWrapper {
-    height: 80vh;
+    height: 90vh;
     margin-left: 6%;
 }
 
