@@ -19,6 +19,7 @@ h6 {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: #000;
+    font-weight: 500;
 }
 
 main {
@@ -275,24 +276,231 @@ main {
 
 /* Submitting place end */
 
+/* CHARTS */
+.drop {
+    position: relative;
+}
+
+
+
+.noBakBorder {
+    border: none;
+    background-color: transparent;
+}
+
+.chart {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+
+.dropsChart {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: auto;
+
+}
+
+/* PROFILE */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-info h2 {
+    padding-top: 10px;
+}
+
+.profile-background {
+    width: 100vw;
+}
+
+.profile-pic {
+    margin-top: -80px;
+}
+
+.change-profile-picture {
+    position: absolute;
+    top: 29.5%;
+    left: 60%;
+}
+
+.change-cover-picture {
+    position: absolute;
+    top: 19%;
+    right: 2%;
+}
+
+
+
+.badges-section {
+    background-color: white;
+    padding: 20px 10px 20px 10px;
+    margin: 20px;
+    border-radius: 10px;
+    padding-bottom: 35px;
+}
+
+.badges-section a {
+    position: absolute;
+    right: 35px;
+    text-decoration: underline;
+}
+
+.badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.badges div {
+    padding-right: 20px;
+}
+
+.helpIcon {
+    position: absolute;
+    right: 35px;
+}
+
+.badges p {
+    font-weight: bold;
+}
+
+.profile-theCowSpeeking {
+    position: absolute;
+    left: 60%;
+    top: 150px;
+}
+
+.profile-green-p {
+    color: green;
+    font-size: 25px;
+}
+
+.hey {
+    font-weight: bold;
+}
+
+.leaderboard {
+    background-color: #E0E9D7;
+    margin: 6%;
+    border-radius: 10px;
+    margin-top: 260px;
+    padding-top: 30px;
+    margin-bottom: 100px;
+}
+
+.leaderboard p,
+.leaderboard h2 {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.top-3 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+}
+
+.leaderboard img {
+    display: block;
+    margin: 0 auto;
+}
+
+.tal {
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.score img {
+    width: 20px;
+    margin: 0;
+    padding-right: 5px;
+}
+
+.landmand1 {
+    margin-top: -30px;
+}
+
+.egen-placering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px 15px 0;
+}
+
+.mig,
+.bad-score {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.mig p,
+.mig img,
+.bad-score img {
+    padding-right: 10px;
+}
+
+
+
+
+
+
 /* SETTINGS */
 .settings {
     display: flex;
     flex-direction: column;
 }
 
+.settings h2 {
+    margin: 8% 0 2% 10%;
+}
+
 .settingsDrop {
-    width: 80%;
+    width: 100%;
     display: flex;
     margin: auto;
     justify-content: space-between;
-
 }
 
-.logout-button {
-    color: #78AB77;
+.dropdown-settings {
+    margin: 3% 10%;
 }
 
+.logoutButton {
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+}
+
+.logoutbtn {
+    background-color: #78AB77;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.logoutIcon {
+    margin-right: 8%;
+}
 
 
 @media only screen and (max-width: 350px) {
@@ -303,4 +511,16 @@ main {
     .theCowSpeeking {
         left: 60%;
     }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .change-profile-picture {
+        top: 25%;
+    }
+
+    .change-cover-picture {
+        top: 15.5%;
+    }
+
 }

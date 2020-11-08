@@ -14,7 +14,7 @@
         <div class="wrapperNav">
             <div class="navbarBullet">
                 <a href="index.html">
-                    <img class="iconNavbar" id="firstIcon" src="images/house-1.svg" alt="">
+                    <img class="iconNavbar" id="firstIcon" src="images/house-1-empty.svg" alt="">
                     <p class="textNavbar" id="firstText">Home</p>
                 </a>
             </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="navbarBullet">
                 <a href="settings.html">
-                    <img class="iconNavbar" id=fourthIcon" src="images/Icon material-settings.svg" alt="">
+                    <img class="iconNavbar" id=fourthIcon" src="images/settingsicon.svg" alt="">
                     <p class="textNavbar" id="fourthText">Settings</p>
                 </a>
             </div>
@@ -40,35 +40,37 @@
     </nav>
 
     <main>
-        <h2>SETTINGS</h2>
         <section class="settings">
-            <div class="dropdown">
+
+            <h2>SETTINGS</h2>
+
+            <div class="dropdown dropdown-settings">
                 <button onclick="myFunction(), rotateFunction()" class="dropbtn settingsDrop">Personal settings
                     <span><img class="arrowDropdown" id="arrowDropdown" src="images/Icon ionic-ios-arrow-back.svg"
                             alt=""></span></button>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown dropdown-settings">
                 <button onclick="myFunction(), rotateFunction()" class="dropbtn settingsDrop">Help and support
                     <span><img class="arrowDropdown" id="arrowDropdown" src="images/Icon ionic-ios-arrow-back.svg"
                             alt=""></span></button>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown dropdown-settings">
                 <button onclick="myFunction(), rotateFunction()" class="dropbtn settingsDrop">Feedback <span><img
                             class="arrowDropdown" id="arrowDropdown" src="images/Icon ionic-ios-arrow-back.svg"
                             alt=""></span></button>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown dropdown-settings">
                 <button onclick="myFunction(), rotateFunction()" class="dropbtn settingsDrop">FAQ <span><img
                             class="arrowDropdown" id="arrowDropdown" src="images/Icon ionic-ios-arrow-back.svg"
                             alt=""></span></button>
             </div>
 
-            <div class="logout-button">
-                <button onclick="myFunction()"><img class="logoutIcon" id="logoutIcon" src="images/logouticon.svg"
-                        alt=""></span> Log out</button>
+            <div class="logoutButton">
+                <button class="logoutbtn" onclick="myFunction()"><img class="logoutIcon" id="logoutIcon"
+                        src="images/logouticon.svg" alt=""></span> Log out</button>
             </div>
         </section>
     </main>

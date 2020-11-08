@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arla</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/select-css.css">
 </head>
 
 
@@ -15,18 +16,18 @@
         <div class="wrapperNav">
             <div class="navbarBullet">
                 <a href="index.html">
-                    <img class="iconNavbar" id="firstIcon" src="images/house-1.svg" alt="">
+                    <img class="iconNavbar" id="firstIcon" src="images/house-1-empty.svg" alt="">
                     <p class="textNavbar" id="firstText">Home</p>
                 </a>
             </div>
             <div class="navbarBullet">
                 <a href="charts.html">
-                    <img class="iconNavbar" id="secondIcon" src="images/Icon material-show-chart.svg" alt="">
+                    <img class="iconNavbar" id="secondIcon" src="images/charticon-filled.svg" alt="">
                     <p class="textNavbar" id="secondText">Charts</p>
                 </a>
             </div>
             <div class="navbarBullet">
-                <a href="">
+                <a href="profile.html">
                     <img class="iconNavbar" id="thirdIcon" src="images/Profile.svg" alt="">
                     <p class="textNavbar" id="thirdText">Profile</p>
                 </a>
@@ -40,8 +41,63 @@
         </div>
     </nav>
 
-    <body>
 
-    </body>
+    <main>
+        <section>
+            <h1>My Data</h1>
+            <p><i>Choose farm first</i></p>
+            <div id="charts">
+                <div class="dropsChart">
+                    <select onchange="diagram(this.value)" class="select-css" name="Kategori1" id="Kategori1">
+                        <option value="">Category</option>
+                        <option value="co2">
+                            <p>CO<i>2</i></p>
+                        </option>
+                        <option value="Energy">Energy</option>
+                        <option value="Digestion">Digestion
+                        </option>
+                        <option value="Milk">Milk</option>
+                        <option value="Cows">Cows</option>
+                    </select>
+                    <select class="select-css" name="farm1" id="farm1">
+                        <option value="">Farm</option>
+                        <option value="north1">North1</option>
+                        <option value="north2">North2
+                        </option>
+                        <option value="north3">North3</option>
+
+                    </select>
+                    <button onclick="addSubject()" class="noBakBorder"><img src="images/plus.svg" alt=""></button>
+
+                </div>
+                <p><i>Maximum 2 charts.</i></p>
+            </div>
+            <canvas id="myChart"></canvas>
+
+
+        </section>
+
+        <section>
+            <h1>Your footprint</h1>
+            <p><i>Click a category for more information</i></p>
+            <canvas id="myPie"></canvas>
+
+
+        </section>
+
+
+
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="javascript/firebase-config.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/charts.js"></script>
+    <script src="javascript/pieChart.js"></script>
+
+</body>
 
 </html>
