@@ -8,18 +8,7 @@ function addSubject() {
         let whatToAdd = /*html*/ `
  <div id = "chart${i}"
  class = "dropsChart" >
-                    <select onchange="diagram2(this.value)" class="select-css" name="Kategori1" id="Kategori1">
-                        <option value="">Category</option>
-                        <option value="co2">
-                            <p>CO<i>2</i></p>
-                        </option>
-                        <option value="Energy">Energy</option>
-                        <option value="Digestion">Digestion
-                        </option>
-                        <option value="Milk">Milk</option>
-                        <option value="Cows">Cows</option>
-                    </select>
-                    <select class="select-css" name="farm1" id="farm2">
+ <select class="select-css" name="farm1" id="farm2">
                         <option value="">Farm</option>
                         <option value="north1">North1</option>
                         <option value="north2">North2
@@ -27,6 +16,18 @@ function addSubject() {
                         <option value="north3">North3</option>
 
                     </select>
+                    <select onchange="diagram2(this.value)" class="select-css" name="Kategori1" id="Kategori1">
+                        <option value="">Category</option>
+                        <option value="co2">
+                            <p>CO<i>2</i></p>
+                        </option>
+
+                        <option value="Digestion">Feed
+                        </option>
+                        <option value="Milk">Milk</option>
+                        <option value="Cows">Cows</option>
+                    </select>
+                    
                     <button onclick="removeSubject('#chart${i}')" class="noBakBorder"><img src="images/minus.svg" alt=""></button>
 
                 </div>
@@ -101,21 +102,40 @@ _dataRef.orderBy("year").onSnapshot(snapshotData => {
 
 });
 
+// dynamiske farver på charts
+function dynamicColors() {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
 
+// Tjekker mindste værdien af y-aksen
+function nyYAkse(dataSet) {
+    if (chart.options.scales.yAxes[0].ticks.min > Math.min(...dataSet)) {
+        chart.options.scales.yAxes[0].ticks.min = (Math.round(Math.min(...dataSet) - 50));
+    }
+
+    if (chart.options.scales.yAxes[0].ticks.max < Math.max(...dataSet)) {
+        chart.options.scales.yAxes[0].ticks.max = (Math.round(Math.max(...dataSet) + 50));
+    }
+
+}
 
 
 //add datasets
-function Dataset(data, label, chart) {
+function Dataset(data, label) {
+    let chartColor = dynamicColors()
     let datasetToAdd = {
         data: data,
         label: label,
         fill: false,
-        borderColor: "#e755ba",
-        backgroundColor: "#e755ba",
-        pointBackgroundColor: "#55bae7",
-        pointBorderColor: "#55bae7",
-        pointHoverBackgroundColor: "#55bae7",
-        pointHoverBorderColor: "#55bae7",
+        borderColor: chartColor,
+        backgroundColor: chartColor,
+        pointBackgroundColor: chartColor,
+        pointBorderColor: chartColor,
+        pointHoverBackgroundColor: chartColor,
+        pointHoverBorderColor: chartColor,
 
     }
     console.log(datasetToAdd)
@@ -157,9 +177,10 @@ function addMilk(sustainabilityData) {
 
 
     });
-    let dataset = Dataset(milk, farm, chart)
+    let dataset = Dataset(milk, 'Milk in kg ' + '(' + farm + ')', chart)
     console.log(dataset)
     chart.data.datasets.push(dataset)
+    nyYAkse(milk)
     chart.update();
 }
 
@@ -196,9 +217,10 @@ function addFeed(sustainabilityData) {
 
 
     });
-    let dataset = Dataset(feed, farm, chart)
+    let dataset = Dataset(feed, 'Feed in tons ' + '(' + farm + ')', chart)
     console.log(dataset)
     chart.data.datasets.push(dataset)
+    nyYAkse(feed)
     chart.update();
 }
 
@@ -236,11 +258,14 @@ function addCarbon(sustainabilityData) {
 
 
     });
-    let dataset = Dataset(carbon, farm, chart)
+    let dataset = Dataset(carbon, 'CO2 in tons ' + '(' + farm + ')', chart)
     console.log(dataset)
     chart.data.datasets.push(dataset)
+    nyYAkse(carbon)
     chart.update();
 }
+
+
 
 
 
@@ -280,9 +305,10 @@ function addCows(sustainabilityData) {
 
     });
 
-    let dataset = Dataset(cows, farm, chart)
+    let dataset = Dataset(cows, 'Cows' + '(' + farm + ')', chart)
     console.log(dataset)
     chart.data.datasets.push(dataset)
+    nyYAkse(cows)
     chart.update();
 
 
@@ -481,18 +507,23 @@ function appendMilk(sustainabilityData) {
             labels: data.years
         },
         options: {
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            hover: {
+                mode: 'index',
+                intersect: false
+            },
             scales: {
                 yAxes: [{
                     ticks: {
-                        min: 500000,
-                        max: 10
+                        min: (Math.round(Math.min(...data.milk) - 50)),
+                        max: (Math.round(Math.max(...data.milk) - 50))
                     }
                 }]
             },
-            ticks: {
-                min: 10,
-                max: 300
-            }
+
         }
     });
 }
@@ -510,7 +541,7 @@ function appendCarbon(sustainabilityData) {
         data: {
             datasets: [{
                 data: data.carbon,
-                label: 'carbon in tons',
+                label: 'CO2 tons',
                 fill: false,
                 borderColor: "#e755ba",
                 backgroundColor: "#e755ba",
@@ -522,6 +553,14 @@ function appendCarbon(sustainabilityData) {
             labels: data.years
         },
         options: {
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            hover: {
+                mode: 'index',
+                intersect: false
+            },
             scales: {
                 yAxes: [{
                     ticks: {
@@ -557,18 +596,23 @@ function appendCows(sustainabilityData) {
             labels: data.years
         },
         options: {
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            hover: {
+                mode: 'index',
+                intersect: false
+            },
             scales: {
                 yAxes: [{
                     ticks: {
-                        min: 500,
-                        max: 10
+                        min: (Math.round(Math.min(...data.cows) - 50)),
+                        max: (Math.round(Math.max(...data.cows) - 50))
                     }
                 }]
             },
-            ticks: {
-                min: 10,
-                max: 300
-            }
+
         }
     });
 }
@@ -595,6 +639,14 @@ function appendFeed(sustainabilityData) {
             labels: data.years
         },
         options: {
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            hover: {
+                mode: 'index',
+                intersect: false
+            },
             scales: {
                 yAxes: [{
                     ticks: {

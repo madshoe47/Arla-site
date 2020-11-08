@@ -48,17 +48,6 @@
             <p><i>Choose farm first</i></p>
             <div id="charts">
                 <div class="dropsChart">
-                    <select onchange="diagram(this.value)" class="select-css" name="Kategori1" id="Kategori1">
-                        <option value="">Category</option>
-                        <option value="co2">
-                            <p>CO<i>2</i></p>
-                        </option>
-                        <option value="Energy">Energy</option>
-                        <option value="Digestion">Digestion
-                        </option>
-                        <option value="Milk">Milk</option>
-                        <option value="Cows">Cows</option>
-                    </select>
                     <select class="select-css" name="farm1" id="farm1">
                         <option value="">Farm</option>
                         <option value="north1">North1</option>
@@ -67,6 +56,17 @@
                         <option value="north3">North3</option>
 
                     </select>
+                    <select onchange="diagram(this.value)" class="select-css" name="Kategori1" id="Kategori1">
+                        <option value="">Category</option>
+                        <option value="co2">
+                            <p>CO<i>2</i></p>
+                        </option>
+                        <option value="Digestion">Feed
+                        </option>
+                        <option value="Milk">Milk</option>
+                        <option value="Cows">Cows</option>
+                    </select>
+
                     <button onclick="addSubject()" class="noBakBorder"><img src="images/plus.svg" alt=""></button>
 
                 </div>

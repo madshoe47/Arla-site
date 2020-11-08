@@ -11,6 +11,7 @@ const pieCanvas = document.querySelector('#myPie')
 
 chart = new Chart(pieCanvas, {
     type: 'doughnut',
+
     data: {
         datasets: [{
 
@@ -27,9 +28,19 @@ chart = new Chart(pieCanvas, {
             ],
 
         }],
+        labels: [
+            'Energy',
+            'Diesel',
+            'Cows',
+            'Production',
+            'Feed'
+
+        ]
 
 
 
     },
 
 });
+
+console.log(chart)
