@@ -55,3 +55,23 @@ $("#pro-form input").keyup(function () {
         progressMessage.text("10/10");
     }
 });
+
+
+
+let modal = document.getElementById("modalID");
+let helpBtn = document.getElementById("helpIconFormID");
+let span = document.getElementsByClassName("close")[0];
+
+helpBtn.onclick = function () {
+    modal.style.display = "block";
+};
+
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
