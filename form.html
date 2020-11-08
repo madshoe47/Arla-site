@@ -12,41 +12,124 @@
 
 <body>
     <form accept-charset="UTF-8" action="#" class="pro-form" id="pro-form" method="post">
-
-        <h1>Herd</h1>
+        <div class="overskrifttilbage">
+            <a href="index.html"><img src="images/piltilbage.svg" alt=""></a>
+            <h1>Herd</h1>
+        </div>
 
         <div class="progress-wrap">
-            <progress max="3" value="0" id="progress"></progress>
-            <div class="progress-message" id="progress-message">0/3</div>
+            <progress max="10" value="0" id="progress"></progress>
+            <div class="progress-message" id="progress-message">0/10</div>
         </div>
 
         <input id="subscription_plan_id" name="subscription[plan_id]" type="hidden" value="1">
 
         <input id="subscription_stripe_card_token" name="subscription[stripe_card_token]" type="hidden">
 
-        <div class="field">
-            <label for="card_name">1. Milk production</label>
-            <p>Kg milk pr year-cow</p>
-            <input id="card_name" required="required" type="text">
-        </div>
+        <div class="overflowScroll">
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">1. Milk production</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
 
-        <div class="field">
-            <label for="card_address_1">2. Year-cows</label>
-            <p>Nr. of cows</p>
-            <input id="card_address_1" required="required" type="text">
-        </div>
+                <p>Kg milk pr year-cow</p>
+                <input id="card_name" type="text">
+            </div>
 
-        <div class="field">
-            <label for="card_zip">3. Self-sufficiency in feed</label>
-            <p>% of dry matter</p>
-            <input id="card_zip" required="required" type="text">
-        </div>
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">2. year-cow</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>Nr. of cows</p>
+                <input id="card_address_1" type="text">
+            </div>
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">3. Self-sufficiency in feed</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>% of dry matter</p>
+                <input id="card_zip" type="text">
+            </div>
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">4. Milk production</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+
+                <p>Kg milk pr year-cow</p>
+                <input id="card_name" type="text">
+            </div>
+
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">5. year-cow</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>Nr. of cows</p>
+                <input id="card_address_1" type="text">
+            </div>
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">6. Self-sufficiency in feed</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>% of dry matter</p>
+                <input id="card_zip" type="text">
+            </div>
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">7. Milk production</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+
+                <p>Kg milk pr year-cow</p>
+                <input id="card_name" type="text">
+            </div>
+
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">8. year-cow</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>Nr. of cows</p>
+                <input id="card_address_1" type="text">
+            </div>
+
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">9. Self-sufficiency in feed</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>% of dry matter</p>
+                <input id="card_zip" type="text">
+            </div>
+            <div class="field">
+                <div class="fieldHeader">
+                    <label for="card_name">10. Self-sufficiency in feed</label>
+                    <img class="helpIconForm" src="images/helpicon.svg" alt="">
+                </div>
+                <p>% of dry matter</p>
+                <input id="card_zip" type="text">
+            </div>
 
         </div>
 
         <div class="actions">
-            <input name="commit" type="submit" value="Submit data" class="button">
-            <input name="commit" type="submit" value="Save for later" class="button">
+
+            <a href="/index.html"><input name="commit" type="submit" value="Submit data" class="button" id="btn1"></a>
+
+            <a href="/index.html">
+                <button class="button" id="btn2">Save for later</button>
+            </a>
         </div>
 
     </form>
