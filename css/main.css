@@ -288,7 +288,11 @@ main {
 
 /* CHARTS */
 
-
+.charts{
+    width: 90%;
+    margin: auto;
+    margin-top: 24px;
+}
 
 .drop {
     position: relative;
