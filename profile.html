@@ -48,9 +48,12 @@
         </div>
 
         <section class="badges-section">
-            <!--MODAL KNAP-->
-            <button id="helpIconFormID"><img src="images/helpicon.svg" alt=""></button>
 
+            <div class="badgesHeader">
+                <h3>Badges</h3>
+                <!--MODAL KNAP-->
+                <button id="helpIconBadgesID"><img src="images/helpicon.svg" alt=""></button>
+            </div>
             <!--SELVE MODAL BOKS-->
             <div id="modalID" class="modal">
 
@@ -58,28 +61,58 @@
                 <div class="modalContent">
                     <span class="close">&times;</span>
 
-                    <img src="images/2yearstreak.svg">
-                    <p></p>
+                    <div class="widthSetting">
+                        <h2 class="boldText">Badges</h2>
+                        <p>You can read the meaning of your bagdes here</p>
 
-
-                    <h3>Badges</h3>
-
-                    <div class="badges">
-                        <div>
-                            <img src="images/2yearstreak.svg" alt="2 year streak">
-                            <p>2 year <br> streak</p>
-                        </div>
-                        <div>
-                            <img src="images/2030goal.svg" alt="2030 goal">
-                            <p>2030 goal</p>
-                        </div>
-                        <div>
-                            <img src="images/highjumper.svg" alt="High jumper">
-                            <p>High <br> jumper</p>
+                        <div class="badgesModal">
+                            <div class="singleBadge">
+                                <img class="leftSide" src="images/2yearstreak.svg" alt="2 year streak">
+                                <p class="normalTest rightSide"><span class="boldText">Streak</span><br>You have
+                                    submitted
+                                    your data for a certain amount of
+                                    years.
+                                </p>
+                            </div>
+                            <div class="singleBadge">
+                                <img class="leftSide" src="images/2030goal.svg" alt="2030 goal">
+                                <p class="normalTest rightSide"><span class="boldText">2030 Goal</span><br>You have
+                                    reached
+                                    Arlagårdens 2030 goal; a 30% reduction
+                                    in
+                                    your carbon footprint</p>
+                            </div>
+                            <div class="singleBadge">
+                                <img class="leftSide" src="images/highjumper.svg" alt="High jumper">
+                                <p class="normalTest rightSide"><span class="boldText">High jumper</span><br>You are
+                                    the
+                                    farmer
+                                    who has jumped the leaderboard with
+                                    the
+                                    biggest amount of ranks.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <a href="#">See all</a>
+            </div>
+
+            <div class="badges">
+                <div>
+                    <img src="images/2yearstreak.svg" alt="2 year streak">
+                    <p>2 year <br> streak</p>
+                </div>
+                <div>
+                    <img src="images/2030goal.svg" alt="2030 goal">
+                    <p>2030 goal</p>
+                </div>
+                <div>
+                    <img src="images/highjumper.svg" alt="High jumper">
+                    <p>High <br> jumper</p>
+                </div>
+            </div>
+
+            <a href="#">See all</a>
         </section>
 
         <div class="cowSpeeking">
@@ -155,6 +188,8 @@
 
 
     </main>
+
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>

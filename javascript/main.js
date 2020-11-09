@@ -23,3 +23,22 @@ window.onclick = function (event) {
 function rotateFunction() {
     document.getElementById("arrowDropdown").classList.toggle("rotateArrow");
 }
+
+
+let modalBagdes = document.getElementById("modalID");
+let helpBtnProfile = document.getElementById("helpIconBadgesID");
+let closeSign = document.getElementsByClassName("close")[0];
+
+helpBtnProfile.onclick = function () {
+    modalBagdes.style.display = "block";
+};
+
+closeSign.onclick = function () {
+    modalBagdes.style.display = "none";
+}
+
+window.onclick = (event) => {
+    if (event.target == modalBagdes) {
+        modalBagdes.style.display = "none";
+    }
+};
